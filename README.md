@@ -1,68 +1,73 @@
-# This template is deprecated
+# React Native Realtime Chat
 
-React Native added [first-class support for Typescript in version 0.71](https://reactnative.dev/blog/2023/01/03/typescript-first), with the base template now utilizing it. Additionally, the types have been integrated into the React Native repository. Although this template can still be used to generate projects with older versions of React Native, we will no longer update it. We would like to express our gratitude to all contributors for their efforts in enhancing this template over the years.
+Welcome to React Native Chat. this is a realtime chat application created by React Native Expo, Redux toolkit, Nest JS
 
-## :space_invader: React Native Template TypeScript
+## Required:
 
-<p>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/actions/workflows/npm-publish.yml">
-    <img alt="Build Status" src="https://github.com/react-native-community/react-native-template-typescript/actions/workflows/npm-publish.yml/badge.svg" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/react-native-community/react-native-template-typescript/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+- Node JS runtime: Version 20.10.0 or early
+- Node Pakage Manager: Recommended using Yarn and NPM
+- Localhost Port: 3000 (for Resful API server), 3001 (for Socket gateway), 8081 (for Expo Metro)
+- Android or IOS virtual device
+- (Optional) Expo go application: download Expo go application on your physical device to debug on your device
+- (Optional) Docker: Version 24.6 or early
+- (Optional) Git CLI: Git command line interface to clone source code
 
-> Clean and minimalist React Native template for a quick start with TypeScript.
+## How to run:
 
-## :star: Features
-
-- Elegant usage directly within the [React Native CLI](https://github.com/react-native-community/cli)
-- Consistent with the default React Native template
-- Minimal additional dependencies
-
-## :arrow_forward: Usage
-
+- Step 1: Clone React Native client
 ```sh
-npx react-native init MyApp --template react-native-template-typescript@6.12.10
+git clone 'https://github.com/duongtrungnguyenrc/chat-app-server.git'
+```
+or
+Access to 'https://github.com/duongtrungnguyenrc/chat-app-server' and download source code
+
+- Step 2: Clone Nest JS server
+```sh
+git clone 'https://github.com/duongtrungnguyenrc/react-native-chat.git'
+```
+or
+Access to 'https://github.com/duongtrungnguyenrc/react-native-chat' and download source code
+
+- Step 3: Go to project
+### NOTE:  
+Recommend using 2 terminal to handle.
+
+Go to server project:
+```sh
+cd <Downloaded server path>
 ```
 
-See the below table to find out which version of the template to use.
+Go to client project:
+```sh
+cd <Downloaded client path>
+```
 
-#### React Native <=> Template Version
+- Step 4: Install dependencies
 
-| React Native | Template |
-| ------------ | -------- |
-| 0.70         | 6.12.\*  |
-| 0.69         | 6.11.\*  |
-| 0.68         | 6.10.\*  |
-| 0.67         | 6.9.\*   |
-| 0.66         | 6.8.\*   |
-| 0.65         | 6.7.\*   |
-| 0.64         | 6.6.\*   |
-| 0.63         | 6.5.\*   |
-| 0.62         | 6.4.\*   |
-| 0.61         | 6.3.\*   |
-| 0.60         | 6.2.\*   |
+In server terminal:
+```sh
+npm install
+```
 
-## :warning: React Native CLI
+In server terminal:
+```sh
+yarn install
+```
 
-This template only works with the new CLI. Make sure you have uninstalled the legacy `react-native-cli` first (`npm uninstall -g react-native-cli`) for the below command to work. If you wish to not use `npx`, you can also install the new CLI globally (`npm i -g @react-native-community/cli` or `yarn global add @react-native-community/cli`).
+- Step 5: Start project
 
-If you tried the above and still get the react-native-template-react- native-template-typescript: Not found error, please try adding the `--ignore-existing` flag to [force npx to ignore](https://github.com/npm/npx#description) any locally installed versions of the CLI and use the latest.
+In server terminal:
+```sh
+npm start
+```
+![Screenshot 2024-05-10 at 19 14 38](https://github.com/duongtrungnguyenrc/react-native-chat/assets/111481047/73141cd3-9086-4434-805c-814b286eff30)
 
-Further information can be found here: https://github.com/react-native-community/cli#about
+In server terminal:
+```sh
+yarn start
+```
+![Screenshot 2024-05-10 at 19 16 00](https://github.com/duongtrungnguyenrc/react-native-chat/assets/111481047/7ebe8773-69fa-4154-bb71-f9f3f4559c61)
 
-## :computer: Contributing
+## Have a good day 😆
 
-Contributions are very welcome. Please check out the [contributing document](CONTRIBUTING.md).
-
-## :bookmark: License
-
-This project is [MIT](LICENSE) licensed.
+This project created by Duong Trung Nguyen - https://github.com/duongtrungnguyenrc
