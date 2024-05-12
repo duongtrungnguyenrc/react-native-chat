@@ -12,11 +12,20 @@ const LoginScreen = ({ navigation }: { navigation: NavigationProp<any> }) => {
       navigation.navigate("Home");
     } catch (error) {
       if (error instanceof AxiosError) {
-        const errorData: BaseResponseModel<any> = error.response?.data;
+        const response = error.response;
+
         Toast.show({
           type: "error",
           text1: "Login fail!",
-          text2: errorData.message,
+          text2:
+            (response?.data as BaseResponseModel<any>)?.message ??
+            error.message,
+        });
+      } else {
+        Toast.show({
+          type: "error",
+          text1: "Login fail!",
+          text2: "Unknow error",
         });
       }
     }
