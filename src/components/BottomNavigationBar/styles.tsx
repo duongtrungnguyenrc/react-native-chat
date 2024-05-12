@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#4285F4",
-    borderRadius: 20,
+    borderRadius: 50,
     paddingHorizontal: 30,
     paddingVertical: 10,
   },
   newChatButtonIcon: {
     color: "white",
-    marginRight: 7,
+    marginRight: 5,
   },
   newChatButtonText: {
     color: "white",

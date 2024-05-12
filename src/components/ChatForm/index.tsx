@@ -6,11 +6,11 @@ import {
   Platform,
 } from "react-native";
 import styles from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 import Expanded from "../Expanded";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { FontAwesome } from "@expo/vector-icons";
 
 const ChatForm = ({ onSend }: { onSend: (message: string) => void }) => {
   const [message, setMessage] = useState("");
@@ -43,7 +43,7 @@ const ChatForm = ({ onSend }: { onSend: (message: string) => void }) => {
             style={styles.sendButton}
             onPress={handleSendMessage}
           >
-            <FontAwesomeIcon icon={faPaperPlane} color="#fff" />
+            <FontAwesome name="send-o" size={20} color="#fff" />
           </TouchableOpacity>
         )}
       </View>

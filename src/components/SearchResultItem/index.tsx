@@ -2,12 +2,11 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import Expanded from "../Expanded";
 import { BaseResponseModel, User } from "@/models";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faUserCheck, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { userService } from "@/services";
 import Toast from "react-native-toast-message";
 import { AxiosError } from "axios";
 import { NavigationProp } from "@react-navigation/native";
+import { SvgXml } from "react-native-svg";
 
 const SearchResultItem = ({
   user,
@@ -69,9 +68,23 @@ const SearchResultItem = ({
               }
             >
               {user.addFriend ? (
-                <FontAwesomeIcon icon={faUserCheck} size={18} />
+                // <FontAwesomeIcon icon={faUserCheck} size={18} />
+                <SvgXml
+                  xml={
+                    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>'
+                  }
+                  width={18}
+                  height={18}
+                />
               ) : (
-                <FontAwesomeIcon icon={faUserPlus} size={18} color="#fff" />
+                <SvgXml
+                  xml={
+                    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>'
+                  }
+                  width={18}
+                  height={18}
+                  color="#fff"
+                />
               )}
             </TouchableOpacity>
           )}

@@ -64,7 +64,7 @@ class ChatService {
   }
 
   init(accessToken: string) {
-    this.socket = io("http://192.168.31.214/chat", {
+    this.socket = io("http://192.168.31.215/chat", {
       extraHeaders: {
         authorization: `Bearer ${accessToken}`,
       },

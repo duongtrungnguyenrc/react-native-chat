@@ -1,6 +1,4 @@
 import { authService } from "@/services";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
@@ -13,6 +11,7 @@ import {
   Switch,
   Image,
 } from "react-native";
+import { SvgXml } from "react-native-svg";
 const SettingTab = () => {
   const navigation = useNavigation();
   const [form, setForm] = useState({
@@ -48,10 +47,12 @@ const SettingTab = () => {
                   <Text style={styles.profileHandle}>john.doe@mail.com</Text>
                 </View>
 
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size={19}
-                  style={{ color: "#bcbcbc" }}
+                <SvgXml
+                  xml={
+                    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                  }
+                  width={19}
+                  height={19}
                 />
               </TouchableOpacity>
             </View>
@@ -74,10 +75,12 @@ const SettingTab = () => {
 
                   <Text style={styles.rowValue}>English</Text>
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>
@@ -95,10 +98,12 @@ const SettingTab = () => {
 
                   <Text style={styles.rowValue}>Los Angeles, CA</Text>
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>
@@ -152,10 +157,12 @@ const SettingTab = () => {
 
                   <View style={styles.rowSpacer} />
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>
@@ -171,10 +178,12 @@ const SettingTab = () => {
 
                   <View style={styles.rowSpacer} />
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>
@@ -190,10 +199,12 @@ const SettingTab = () => {
 
                   <View style={styles.rowSpacer} />
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>
@@ -209,10 +220,12 @@ const SettingTab = () => {
 
                   <View style={styles.rowSpacer} />
 
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={19}
-                    style={{ color: "#bcbcbc" }}
+                  <SvgXml
+                    xml={
+                      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>'
+                    }
+                    width={19}
+                    height={19}
                   />
                 </TouchableOpacity>
               </View>

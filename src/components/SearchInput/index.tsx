@@ -1,9 +1,8 @@
 import { TouchableOpacity, TextInput, View } from "react-native";
 import styles from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
+import { Ionicons } from "@expo/vector-icons";
 
 const SearchInput = ({
   searchCallback,
@@ -36,11 +35,7 @@ const SearchInput = ({
         style={styles.searchButton}
         onPress={onSearch}
       >
-        <FontAwesomeIcon
-          style={styles.searchButtonIcon}
-          icon={faSearch}
-          size={18}
-        />
+        <Ionicons name="search" size={24} color="#fff" />
       </TouchableOpacity>
     </View>
   );

@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  KeyboardAvoidingView,
+} from "react-native";
 import styles from "./styles";
 import ThirdPartyAuth from "../ThirdPartyAuth";
 import AuthFormHeader from "../FormHeader";
@@ -13,8 +18,8 @@ const LoginForm = ({
   onSignUpTap: () => void;
   onSignIn: (email: string, password: string) => void;
 }) => {
-  const [email, setEmail] = useState("duongtrungnguyen00@gmail.com");
-  const [password, setPassword] = useState("nguyendeptraivaicac");
+  const [email, setEmail] = useState("nbieuly@gmail.com");
+  const [password, setPassword] = useState("lydepvcl");
 
   const handleEmailChange = useDebouncedCallback((text: string) => {
     setEmail(text);
@@ -29,7 +34,7 @@ const LoginForm = ({
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <AuthFormHeader
         title="Sign in to Pattern"
         subTitle="Welcome back, please login to continue"
@@ -60,7 +65,7 @@ const LoginForm = ({
           <Text style={styles.signUpButton}>Sign up</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 

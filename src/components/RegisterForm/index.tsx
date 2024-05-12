@@ -1,4 +1,9 @@
-import { TouchableOpacity, View, Text } from "react-native";
+import {
+  TouchableOpacity,
+  View,
+  Text,
+  KeyboardAvoidingView,
+} from "react-native";
 import AuthFormHeader from "../FormHeader";
 import FormInput from "../FormInput";
 import Row from "../Row";
@@ -43,7 +48,7 @@ const RegisterForm = ({
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <AuthFormHeader
         title="Register account"
         subTitle="Register new account to continue chat"
@@ -98,7 +103,7 @@ const RegisterForm = ({
           <Text style={styles.signUpButton}>Sign in</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 export default RegisterForm;

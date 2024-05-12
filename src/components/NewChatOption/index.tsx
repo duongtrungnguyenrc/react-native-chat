@@ -1,5 +1,3 @@
-import { faMessage } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { Text, View } from "react-native";
 import styles from "./styles";
 import React from "react";

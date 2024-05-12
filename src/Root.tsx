@@ -15,7 +15,7 @@ import { LoadingOverlay } from "./components";
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function Root() {
   return (
     <Provider store={store}>
       <NavigationContainer>

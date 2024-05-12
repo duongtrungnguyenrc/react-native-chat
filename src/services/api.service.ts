@@ -3,7 +3,7 @@ import axios, { AxiosInstance } from "axios";
 class Api {
   private static instance: Api | null = null;
   private api: AxiosInstance = axios.create({
-    baseURL: "http://192.168.31.214:3000/api/",
+    baseURL: "http://192.168.31.215:3000/api/",
   });
 
   private constructor() {}

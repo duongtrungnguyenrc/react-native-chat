@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { TouchableOpacity, View, Text } from "react-native";
 import styles from "./styles";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
+import { SvgXml } from "react-native-svg";
 
 const BackAppBar = ({ heading }: { heading: string }) => {
   const navigation = useNavigation();
@@ -14,7 +13,13 @@ const BackAppBar = ({ heading }: { heading: string }) => {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={onBack} style={styles.actionButton}>
-        <FontAwesomeIcon icon={faArrowLeft} size={20} />
+        <SvgXml
+          xml={
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>'
+          }
+          width={20}
+          height={20}
+        />
       </TouchableOpacity>
       <Text style={styles.heading}>{heading}</Text>
       <View style={styles.actionButton} />

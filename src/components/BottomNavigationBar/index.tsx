@@ -1,11 +1,9 @@
 import { TouchableOpacity, View, Text } from "react-native";
 import styles from "./styles";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { NavigationProp } from "@react-navigation/native";
 import { dispath, RootState, setVisible } from "@/context";
 import { useSelector } from "react-redux";
-import { faComments, faUser } from "@fortawesome/free-regular-svg-icons";
+import { AntDesign, Entypo, Feather } from "@expo/vector-icons";
 
 const BottomNavigationBar = ({
   navigation,
@@ -22,7 +20,7 @@ const BottomNavigationBar = ({
         }}
         style={styles.normalButton}
       >
-        <FontAwesomeIcon size={30} icon={faComments} color="#4285F4" />
+        <AntDesign name="home" size={28} color="black" />
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -31,7 +29,12 @@ const BottomNavigationBar = ({
         }}
         style={{ ...styles.newChatButton, opacity: visible ? 0 : 1 }}
       >
-        <FontAwesomeIcon style={styles.newChatButtonIcon} icon={faPlus} />
+        <Entypo
+          style={styles.newChatButtonIcon}
+          name="plus"
+          size={22}
+          color="#fff"
+        />
         <Text style={styles.newChatButtonText}>New chat</Text>
       </TouchableOpacity>
 
@@ -41,7 +44,7 @@ const BottomNavigationBar = ({
         }}
         style={styles.normalButton}
       >
-        <FontAwesomeIcon size={24} icon={faUser} color="#4285F4" />
+        <Feather name="settings" size={28} color="black" />
       </TouchableOpacity>
     </View>
   );

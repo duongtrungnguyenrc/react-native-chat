@@ -1,12 +1,11 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import SearchInput from "../SearchInput";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { useSelector } from "react-redux";
 import { RootState } from "@/context";
 import { useNavigation } from "@react-navigation/native";
 import { userService } from "@/services";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const AppBar = () => {
   const navigation = useNavigation();
@@ -24,7 +23,7 @@ const AppBar = () => {
       await userService.search(key);
 
       navigation.navigate("SearchResult" as never);
-      return true
+      return true;
     } catch (error) {
       console.log(`Search error: ${error}`);
     }
@@ -40,7 +39,11 @@ const AppBar = () => {
             onPress={onOpenNotifications}
             style={styles.notificationButton}
           >
-            <FontAwesomeIcon icon={faBell} size={20} />
+            <MaterialCommunityIcons
+              name="bell-ring-outline"
+              size={24}
+              color="black"
+            />
           </TouchableOpacity>
           {friendRequests.length > 0 && (
             <View style={styles.notificationCheckPoint} />
